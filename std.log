@@ -1,2 +1,2 @@
-2024-04-09 08:26:29,676 Using selector: EpollSelector
-2024-04-09 08:27:01,382 Error: net::ERR_TIMED_OUT at https://www.tiktok.com/@lovejoy_online
+2024-04-09 09:24:06,197 Using selector: EpollSelector
+2024-04-09 09:26:09,086 Error: Data scraping unable to complete in 60.0s (retries: 3)
