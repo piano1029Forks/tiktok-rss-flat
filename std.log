@@ -1,2 +1,86 @@
-2024-08-16 23:24:37,712 Using selector: EpollSelector
-2024-08-16 23:26:40,031 Error: Data scraping unable to complete in 60.0s (retries: 3)
+2024-08-17 01:39:17,087 Using selector: EpollSelector
+2024-08-17 01:39:18,128 Error: BrowserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /home/runner/.cache/ms-playwright/chromium-1129/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --single-process --user-data-dir=/tmp/playwright_chromiumdev_profile-XXXXXXSIxYHr --remote-debugging-pipe --no-startup-window
+<launched> pid=3014
+[pid=3014][err] Old Headless mode will be removed from the Chrome binary soon. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+[pid=3014][err] 
+[pid=3014][err] [0817/013917.519294:WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
+[pid=3014][err] Received signal 11 SI_KERNEL000000000000
+[pid=3014][err]  Possibly a General Protection Fault, can be due to a non-canonical address dereference. See "Intel 64 and IA-32 Architectures Software Developer’s Manual", Volume 1, Section 3.3.7.1.
+[pid=3014][err] #0 0x559ac52c2442 base::debug::CollectStackTrace()
+[pid=3014][err] #1 0x559ac52af3be base::debug::StackTrace::StackTrace()
+[pid=3014][err] #2 0x559ac52c1e51 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+[pid=3014][err] #3 0x7f2ca7c42520 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4251f)
+[pid=3014][err] #4 0x7f2ca7c44c1d getenv
+[pid=3014][err] #5 0x559ac5c0d0ff FcDirChecksum
+[pid=3014][err] #6 0x559ac5c0d004 FcDirCacheBuild
+[pid=3014][err] #7 0x559ac5c12cc3 FcDirCacheScan
+[pid=3014][err] #8 0x559ac5c12d4b IA__FcDirCacheRead
+[pid=3014][err] #9 0x559ac5c08257 FcConfigAddDirList
+[pid=3014][err] #10 0x559ac5c081a2 IA__FcConfigBuildFonts
+[pid=3014][err] #11 0x559ac5c17531 IA__FcInitLoadConfigAndFonts
+[pid=3014][err] #12 0x559ac5c076d1 FcConfigInit
+[pid=3014][err] #13 0x559ac5d59945 base::NoDestructor<>::NoDestructor<>()
+[pid=3014][err] #14 0x559ac5d598d6 base::internal::Invoker<>::RunOnce()
+[pid=3014][err] #15 0x559ac525335f base::TaskAnnotator::RunTaskImpl()
+[pid=3014][err] #16 0x559ac5277237 base::internal::TaskTracker::RunTaskImpl()
+[pid=3014][err] #17 0x559ac52772d1 base::internal::TaskTracker::RunSkipOnShutdown()
+[pid=3014][err] #18 0x559ac5276f86 base::internal::TaskTracker::RunTask()
+[pid=3014][err] #19 0x559ac5276a55 base::internal::TaskTracker::RunAndPopNextTask()
+[pid=3014][err] #20 0x559ac52891e8 base::internal::WorkerThread::RunWorker()
+[pid=3014][err] #21 0x559ac5288e4d base::internal::WorkerThread::RunPooledWorker()
+[pid=3014][err] #22 0x559ac5288d4d base::internal::WorkerThread::ThreadMain()
+[pid=3014][err] #23 0x559ac52a5b2a base::(anonymous namespace)::ThreadFunc()
+[pid=3014][err] #24 0x7f2ca7c94ac3 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x94ac2)
+[pid=3014][err] #25 0x7f2ca7d26850 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x12684f)
+[pid=3014][err]   r8: 0000159000215400  r9: 0000000000000000 r10: 0000000000000068 r11: 0000159400125e68
+[pid=3014][err]  r12: 005c020090150000 r13: 0000000000000011 r14: 000000000000000f r15: 0000559abd8d65da
+[pid=3014][err]   di: 0000559abd8d65d8  si: 0000000000000000  bp: 0000000000004f53  bx: 0000159000024800
+[pid=3014][err]   dx: 0000559abd8d65d8  ax: 0000000000000011  cx: 0000000000000a80  sp: 00007f2ca32457c0
+[pid=3014][err]   ip: 00007f2ca7c44c1d efl: 0000000000010206 cgf: 002b000000000033 erf: 0000000000000000
+[pid=3014][err]  trp: 000000000000000d msk: 0000000000000000 cr2: 0000000000000000
+[pid=3014][err] [end of stack trace]
+Call log:
+<launching> /home/runner/.cache/ms-playwright/chromium-1129/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --single-process --user-data-dir=/tmp/playwright_chromiumdev_profile-XXXXXXSIxYHr --remote-debugging-pipe --no-startup-window
+  - <launched> pid=3014
+  - [pid=3014][err] Old Headless mode will be removed from the Chrome binary soon. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+  - [pid=3014][err] 
+  - [pid=3014][err] [0817/013917.519294:WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
+  - [pid=3014][err] Received signal 11 SI_KERNEL000000000000
+  - [pid=3014][err]  Possibly a General Protection Fault, can be due to a non-canonical address dereference. See "Intel 64 and IA-32 Architectures Software Developer’s Manual", Volume 1, Section 3.3.7.1.
+  - [pid=3014][err] #0 0x559ac52c2442 base::debug::CollectStackTrace()
+  - [pid=3014][err] #1 0x559ac52af3be base::debug::StackTrace::StackTrace()
+  - [pid=3014][err] #2 0x559ac52c1e51 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+  - [pid=3014][err] #3 0x7f2ca7c42520 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4251f)
+  - [pid=3014][err] #4 0x7f2ca7c44c1d getenv
+  - [pid=3014][err] #5 0x559ac5c0d0ff FcDirChecksum
+  - [pid=3014][err] #6 0x559ac5c0d004 FcDirCacheBuild
+  - [pid=3014][err] #7 0x559ac5c12cc3 FcDirCacheScan
+  - [pid=3014][err] #8 0x559ac5c12d4b IA__FcDirCacheRead
+  - [pid=3014][err] #9 0x559ac5c08257 FcConfigAddDirList
+  - [pid=3014][err] #10 0x559ac5c081a2 IA__FcConfigBuildFonts
+  - [pid=3014][err] #11 0x559ac5c17531 IA__FcInitLoadConfigAndFonts
+  - [pid=3014][err] #12 0x559ac5c076d1 FcConfigInit
+  - [pid=3014][err] #13 0x559ac5d59945 base::NoDestructor<>::NoDestructor<>()
+  - [pid=3014][err] #14 0x559ac5d598d6 base::internal::Invoker<>::RunOnce()
+  - [pid=3014][err] #15 0x559ac525335f base::TaskAnnotator::RunTaskImpl()
+  - [pid=3014][err] #16 0x559ac5277237 base::internal::TaskTracker::RunTaskImpl()
+  - [pid=3014][err] #17 0x559ac52772d1 base::internal::TaskTracker::RunSkipOnShutdown()
+  - [pid=3014][err] #18 0x559ac5276f86 base::internal::TaskTracker::RunTask()
+  - [pid=3014][err] #19 0x559ac5276a55 base::internal::TaskTracker::RunAndPopNextTask()
+  - [pid=3014][err] #20 0x559ac52891e8 base::internal::WorkerThread::RunWorker()
+  - [pid=3014][err] #21 0x559ac5288e4d base::internal::WorkerThread::RunPooledWorker()
+  - [pid=3014][err] #22 0x559ac5288d4d base::internal::WorkerThread::ThreadMain()
+  - [pid=3014][err] #23 0x559ac52a5b2a base::(anonymous namespace)::ThreadFunc()
+  - [pid=3014][err] #24 0x7f2ca7c94ac3 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x94ac2)
+  - [pid=3014][err] #25 0x7f2ca7d26850 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x12684f)
+  - [pid=3014][err]   r8: 0000159000215400  r9: 0000000000000000 r10: 0000000000000068 r11: 0000159400125e68
+  - [pid=3014][err]  r12: 005c020090150000 r13: 0000000000000011 r14: 000000000000000f r15: 0000559abd8d65da
+  - [pid=3014][err]   di: 0000559abd8d65d8  si: 0000000000000000  bp: 0000000000004f53  bx: 0000159000024800
+  - [pid=3014][err]   dx: 0000559abd8d65d8  ax: 0000000000000011  cx: 0000000000000a80  sp: 00007f2ca32457c0
+  - [pid=3014][err]   ip: 00007f2ca7c44c1d efl: 0000000000010206 cgf: 002b000000000033 erf: 0000000000000000
+  - [pid=3014][err]  trp: 000000000000000d msk: 0000000000000000 cr2: 0000000000000000
+  - [pid=3014][err] [end of stack trace]
+
