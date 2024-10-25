@@ -1,5 +1,2 @@
-2024-10-25 13:32:23,673 Using selector: EpollSelector
-2024-10-25 13:32:54,141 Error: Page.goto: net::ERR_TIMED_OUT at https://www.tiktok.com/@lovejoy_online
-Call log:
-navigating to "https://www.tiktok.com/@lovejoy_online", waiting until "load"
-
+2024-10-25 14:30:42,855 Using selector: EpollSelector
+2024-10-25 14:32:47,337 Error: Data scraping unable to complete in 60.0s (retries: 3)
